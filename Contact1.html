@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- code by nirdesh -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        #contact {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            margin: 50px auto;
+            border-radius: 10px;
+            height: 700px;
+        }
+
+        #contact .left,
+        #contact .right {
+            flex: 1;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        #contact .left img,
+        #contact .right img {
+            width: 100%;
+            height: 90%;
+            object-fit: cover;
+            border-radius: 10px;
+            position: absolute;
+            top: 5%;
+            left: 0;
+            animation: rotateImages 18s infinite;
+            opacity: 0;
+        }
+
+        /* Keyframes for smooth rotation with 3-second hold */
+        @keyframes rotateImages {
+
+            0%,
+            16.67% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            13.34%,
+            100% {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+        }
+
+        #contact .left img:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        #contact .left img:nth-child(2) {
+            animation-delay: 3s;
+        }
+
+        #contact .left img:nth-child(3) {
+            animation-delay: 6s;
+        }
+
+        #contact .left img:nth-child(4) {
+            animation-delay: 9s;
+        }
+
+        #contact .left img:nth-child(5) {
+            animation-delay: 12s;
+        }
+
+        #contact .left img:nth-child(6) {
+            animation-delay: 15s;
+        }
+
+        #contact .right img:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        #contact .right img:nth-child(2) {
+            animation-delay: 3s;
+        }
+
+        #contact .right img:nth-child(3) {
+            animation-delay: 6s;
+        }
+
+        #contact .right img:nth-child(4) {
+            animation-delay: 9s;
+        }
+
+        #contact .right img:nth-child(5) {
+            animation-delay: 12s;
+        }
+
+        #contact .right img:nth-child(6) {
+            animation-delay: 15s;
+        }
+
+        #contact .center {
+            flex: 2;
+            padding: 20px;
+        }
+
+        #contact h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #9b7f4b;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #7e6638;
+        }
+
+        .contact-info {
+            margin-top: 30px;
+            font-size: 16px;
+            color: #555;
+            text-align: center;
+        }
+
+        .social-media {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-media a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #9b7f4b;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .social-media a:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            background-color: #7e6638;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Contact Us Section -->
+    <section id="contact">
+        <div class="left">
+            <img src="/Contact-us/img1.png" alt="Left Image 1">
+            <img src="/Contact-us/img2.jpeg" alt="Left Image 2">
+            <img src="/Contact-us/img3.jpg" alt="Left Image 3">
+            <img src="/Contact-us/img4.jpeg" alt="Left Image 4">
+            <img src="/Contact-us/img5.jpeg" alt="Left Image 5">
+            <img src="/Contact-us/img6.jpeg" alt="Left Image 6">
+        </div>
+        <div class="center">
+            <h2>Contact Us</h2>
+            <form class="contact-form" onsubmit="return validateForm()">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email (@gmail.com only)" required>
+                <input type="tel" id="phone" placeholder="Your Mobile Number" required>
+                <textarea rows="5" id="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <p>Email: info@studios.com</p>
+                <p>Phone: +977-98xxxxxxx</p>
+                <p>Address: Dang, Nepal</p>
+            </div>
+            <div class="social-media">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+                <a href="https://wa.me/97798xxxxxx" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="right">
+            <img src="/Contact-us/img6.jpeg" alt="Right Image 1">
+            <img src="/Contact-us/img5.jpeg" alt="Right Image 2">
+            <img src="/Contact-us/img4.jpeg" alt="Right Image 3">
+            <img src="/Contact-us/img3.jpg" alt="Right Image 4">
+            <img src="/Contact-us/img2.jpeg" alt="Right Image 5">
+            <img src="/Contact-us/img1.png" alt="Right Image 6">
+        </div>
+    </section>
+
+    <script>
+        function validateForm() {
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Ensure email ends with @gmail.com
+            if (!email.endsWith('@gmail.com')) {
+                alert('Please enter a valid Gmail address.');
+                return false;
+            }
+
+            // Prevent links in the message
+            const urlPattern = /(https?:\/\/|www\.)/i;
+            if (urlPattern.test(message)) {
+                alert('Links are not allowed in the message.');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+
+</html>

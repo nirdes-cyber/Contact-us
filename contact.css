@@ -1,0 +1,136 @@
+/* Contact Section Styles */
+.contact-section {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+}
+
+.contact-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+/* code by nirdesh */
+.contact-section p {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#contact-form {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #f4f4f4;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #333;
+    background: #fff;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+    background: #0056b3;
+}
+
+.contact-info {
+    max-width: 500px;
+    flex: 1;
+}
+
+.map iframe {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.social-icons .icon {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: opacity 0.3s;
+}
+
+.icon.facebook {
+    background: #3b5998;
+}
+
+.icon.instagram {
+    background: #e4405f;
+}
+
+.icon.twitter {
+    background: #55acee;
+}
+
+.icon.linkedin {
+    background: #0077b5;
+}
+
+.icon:hover {
+    opacity: 0.8;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .social-icons {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
